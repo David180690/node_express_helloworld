@@ -1,0 +1,23 @@
+{
+  "name": "node_express_simpleserver_helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David180690/node_express_helloworld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David180690/node_express_helloworld/issues"
+  },
+  "homepage": "https://github.com/David180690/node_express_helloworld#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
