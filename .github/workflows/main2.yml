@@ -1,4 +1,4 @@
-name: CI
+name: CI30
 
 on:
   workflow_dispatch:  # Allows manual triggering
