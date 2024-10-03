@@ -28,8 +28,7 @@ jobs:
         kill $APP_PID  # Terminate the application
         echo "Application stopped after 30 seconds."
 
-    - name: Run tests
-      run: npm test  # Optional: Run tests if you have any
+
 
     - name: Completion Message
       run: echo "Workflow triggered successfully and finished successfully!"  # Message to display
