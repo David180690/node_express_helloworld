@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'  # Specify the Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run application for 30 seconds
+      run: |
+        npm start &  # Start the application in the background
+        APP_PID=$!  # Get the process ID of the last command
+        echo "Application is running for 30 seconds..."
+        sleep 30  # Wait for 30 seconds
+        kill $APP_PID  # Terminate the application
+        echo "Application stopped after 30 seconds."
+
+    - name: Run tests
+      run: npm test  # Optional: Run tests if you have any
+
+    - name: Completion Message
+      run: echo "Workflow triggered successfully and finished successfully!"  # Message to display
