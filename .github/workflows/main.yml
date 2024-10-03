@@ -1,14 +1,7 @@
 name: CI
 
-
 on:
   workflow_dispatch:  # Allows manual triggering
-  push:
-    branches:
-      - main  # Change this to your default branch
-  pull_request:
-    branches:
-      - main  # Change this to your default branch
 
 jobs:
   build:
@@ -31,3 +24,6 @@ jobs:
 
     - name: Run tests
       run: npm test  # Optional: Run tests if you have any
+
+    - name: Completion Message
+      run: echo "Workflow triggered successfully and finished successfully!"  # Message to display
